@@ -1,0 +1,29 @@
+class stack(object):
+    def __init__(self): #default constructor build
+      self.stack=[]
+      self.index=0
+    def empty(self): #check sthe stack is empty or not
+      return self.stack==[]
+    def add(self,data): #stck is empty after we will addded the elements
+      self.stack.insert(self.index,data)
+      self.index+=1
+      return '{} pushed elements in stack'.format(data) #return the elements
+    def sub(self):
+       self.index-=1
+       data=self.stack.pop(self.index)
+       return '{}pop elemets in stack'.format(data)
+    def size(self):
+      return len(self.stack)
+#testing the data
+if __name__=='__main__':
+  s=stack()
+  print(s.add("python"))
+  print(s.add("C++"))
+  print(s.add("Rubee"))
+  print(s.add("Java Script"))
+  print(s.add("Dtaabase"))
+  print(s.add("Sq"))
+  print(s.add(" operating system"))
+  print(s.sub())
+  print(s.sub())
+  print("size of stack",s.size())
